@@ -26,9 +26,13 @@ func main() {
 
 	total := sum(mySlice...)
 	fmt.Println("Sum of slice elements:", total)
-	
-	arr1 [2] = 100
+
+	arr1[2] = 100
 	fmt.Println(arr1)
+
+	p := &arr1[2]
+	*p = 100
+	fmt.Println("Array setelah di ubah melalui pointer :", arr1)
 
 	//println(len(mySlice), cap(mySlice))
 
@@ -43,5 +47,4 @@ func main() {
 	//arr2 = append(arr2, arr3...)
 	//fmt.Println(arr2, arr3)
 
-	
 }
